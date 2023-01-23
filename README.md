@@ -1,6 +1,6 @@
-# Datastruces and Algorithms
+# Data structures and Algorithms
 
-Datastructures and Algorithms pratice in python
+DataStructures and Algorithms pratice in python
 
 > Questions and Topics followed from neetcode.io [roadmap](https://neetcode.io/roadmap)
 
