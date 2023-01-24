@@ -57,11 +57,18 @@ class CSLL:
                     break
 
 if __name__ == '__main__':
-    ll = CSLL()
-    # for i in range(1,5):
-    ll.add_data(1)
-    print('size of ll', ll.size())
-    ll.print_it()
-    ll.delete(4)
-    print()
-    ll.print_it()
+    '''
+        Example Question for CCSL.
+    '''
+    channels = CSLL()
+    n = int(input())
+    k = int(input())
+    for i in range(n,0,-1):
+        channels.add_data(i)
+    index = k-1
+    while(channels.size() > k-1):
+        index= index % channels.size()
+        channels.delete(index) 
+        print()
+        index = index + k - 1
+    channels.print_it()
