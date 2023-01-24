@@ -3,7 +3,6 @@ class Node:
         self.data = data
         self.next = None
 
-
 class CSLL:
     def __init__(self):
         self.head= None
@@ -20,7 +19,8 @@ class CSLL:
          New.next = New
       self.head = New
 
-    def delete(self, pos): 
+    def delete(self, pos):
+        if(pos > self.size()): print('\nPos not present'); return
         if (self.size() == 1): self.head = None; return
         if pos == 0:
             new_head = self.head.next
@@ -62,6 +62,6 @@ if __name__ == '__main__':
     ll.add_data(1)
     print('size of ll', ll.size())
     ll.print_it()
-    ll.delete(0)
+    ll.delete(4)
     print()
     ll.print_it()
