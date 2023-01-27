@@ -50,7 +50,7 @@ class DLL :
                     temp.rnext.lnext = temp.lnext
             else :
                 print('index out of range')
-                
+
 
     def count(self):
         temp = self.Head
@@ -58,7 +58,7 @@ class DLL :
         while temp != None:
             cnt += 1
             temp = temp.rnext
-        return cnt;
+        return cnt
 
 if __name__ == '__main__':
     ob = DLL()
