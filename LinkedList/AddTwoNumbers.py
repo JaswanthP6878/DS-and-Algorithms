@@ -15,9 +15,8 @@ class Solution:
         dummy = ListNode(0, None) ## new List
         t = dummy
         temp1, temp2 = l1,l2
-        c = 0
+        c = 0  ## represents carry forward term
         while temp1 and temp2:
-
             val = temp1.val + temp2.val + c
             d1 = val % 10
             c = val // 10
@@ -27,7 +26,7 @@ class Solution:
             temp1 = temp1.next
             temp2 = temp2.next
         
-        while temp1:
+        while temp1: ## if len(l1)> len(l2)
             val = temp1.val + c
             d1 = val % 10
             c = val // 10
@@ -36,7 +35,7 @@ class Solution:
             t = New
             temp1 = temp1.next
         
-        while temp2:
+        while temp2: ## if len(l2)> len(l1)
             val = temp2.val + c
             d1 = val % 10
             c = val // 10
