@@ -28,19 +28,47 @@ class Stack:
         prev = None
         temp = self.head
         while temp.next:
+            prev = temp
             temp = temp.next
-        
-        
+        sol = temp.data
+        if prev:
+            prev.next = None
+        else :
+            self.head = None
+        self.top -= 1
+        return sol
     
+    def peek(self):
+        if not self.head: print('Stack is Empty'); return
+        temp = self.head
+        while temp.next:
+            temp = temp.next
+        return temp.data
+        
     def prints(self):
+        if not self.head : print('empty stack'); return
         temp = self.head
         while temp:
             print(temp.data, end = '->')
             temp = temp.next
 
 
+def fun(a,b):
+    a.push(b.pop())
+
+
 if __name__ == '__main__':
-    s1 = Stack()
-    for i in range(1,200):
-        s1.push(i)
-    s1.prints()
+    s1=Stack()
+    s2=Stack()
+    s3=Stack()
+    s1.push(30)
+    s1.push(20)
+    s1.push(10)
+    fun(s3,s1)
+    fun(s2,s1)
+    fun(s2,s3)
+    fun(s3,s1)
+    fun(s1,s2)
+    fun(s3,s2)
+    fun(s3,s1)
+    s3.prints()
