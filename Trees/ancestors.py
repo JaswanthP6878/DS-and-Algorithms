@@ -27,6 +27,7 @@ def ancestors_rec(root, key):
             return 1
         if ancestors_rec(root.left, key) or ancestors_rec(root.right, key):
             print(root.val)
+            return 1
     else: return 0
 
 tree1 = Node(2)
