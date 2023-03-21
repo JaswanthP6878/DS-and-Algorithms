@@ -3,8 +3,6 @@ class BSTNode:
         self.val = val
         self.left = None
         self.right = None
-
-
 class BstTree:
     def __init__(self):
         self.root = None
@@ -70,6 +68,4 @@ btree.inorder()
 print()
 btree.root = delete_root(btree.root,6)
 btree.inorder()
-# def delete_leaf(root, key):
-
         
