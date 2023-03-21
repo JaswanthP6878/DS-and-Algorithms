@@ -60,11 +60,9 @@ def delete_root(root,key):
     return root
 
 def max_val(root):
-    temp = root
-    while temp.right:
-        temp = temp.right
-    return temp.val
-
+    while root.right:
+        root = root.right
+    return root.val
 
 btree = BstTree()
 btree.insert(2)
@@ -76,8 +74,7 @@ btree.insert(16)
 btree.insert(9)
 btree.insert(4)
 
-# btree.inorder()
 print()
-# btree.root = delete_root(btree.root,6)
-# btree.inorder()
+print(id(btree.root))
 print(max_val(btree.root))
+# btree.inorder()
