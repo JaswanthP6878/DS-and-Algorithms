@@ -1,3 +1,6 @@
+
+
+
 class TrieNode:
     def __init__(self):
         self.children = [None]*26
@@ -30,7 +33,6 @@ if __name__ == "__main__":
     t1 = Trie()
     t1.insert("hello")
     t1.insert("jaswanth")
-
 
     print(t1.search("hello"))
     print(t1.search("jaswan"))
