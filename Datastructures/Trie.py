@@ -1,10 +1,8 @@
-
-
-
 class TrieNode:
     def __init__(self):
         self.children = [None]*26
         self.final_word = False
+
 
 class Trie:
     def __init__(self):
